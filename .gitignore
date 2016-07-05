@@ -1,2 +1,9 @@
 .sass-cache/
 *.css.map
+logs/*
+!.gitkeep
+node_modules/
+tmp
+.idea
+.DS_Store
+bower_components/
