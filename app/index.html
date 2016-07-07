@@ -1,12 +1,14 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="angularPip">
   <head>
     <meta charset="utf-8">
     <title>angular-pip</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="postList/postList.js"></script>
   </head>
-  <body>
+  <body ng-controller="PostListController">
 
     <section class="container">
         <article>
@@ -14,6 +16,17 @@
             <p>Expression: {{"Hello" + " " + "World"}}!</p>
             <p>The above should read "Expression: Hello World!"</p>
         </article>
+    </section>
+
+    <section class="container">
+        <ul>
+            <li ng-repeat="post in posts">
+                <article>
+                    <h1>{{post.title}}</h1>
+                    <p>{{post.text}}</p>
+                </article>
+            </li>
+        </ul>
     </section>
 
   </body>
