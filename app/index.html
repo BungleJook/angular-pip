@@ -5,10 +5,8 @@
     <title>angular-pip</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="bower_components/angular/angular.js"></script>
-    <script src="app.module.js"></script>
-    <script src="postList/postList.js"></script>
   </head>
-  <body ng-controller="PostListController">
+  <body>
 
     <section class="container">
         <article>
@@ -19,15 +17,15 @@
     </section>
 
     <section class="container">
-        <ul>
-            <li ng-repeat="post in posts">
-                <article>
-                    <h1>{{post.title}}</h1>
-                    <p>{{post.text}}</p>
-                </article>
-            </li>
-        </ul>
+        <post-list></post-list>
     </section>
+
+    <!-- Posts component -->
+    <script src="post-list/post-list.module.js"></script>
+    <script src="post-list/post-list.component.js"></script>
+    
+    <!-- Main module -->
+    <script src="app.module.js"></script>
 
   </body>
 </html>

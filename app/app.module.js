@@ -1,1 +1,3 @@
-var angularPip = angular.module('angularPip', []);
+angular.module('angularPip', [
+    'postList'
+]);
