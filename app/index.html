@@ -5,21 +5,19 @@
     <title>angular-pip</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
   </head>
   <body>
 
-    <section class="container">
-        <article>
-            <h1>Testing AngularJS, Bootstrap and Sass</h1>
-            <p>Expression: {{"Hello" + " " + "World"}}!</p>
-            <p>The above should read "Expression: Hello World!"</p>
-        </article>
-    </section>
+    <header class="jumbotron">
+        <section class="container text-center">
+            <h1>{{"AngularJS, Bootstrap and Sass"}}</h1>
+            <p>Basic project seed focused on AngularJS.</p>
+        </section>
+    </header>
 
-    <section class="container">
-        <post-list></post-list>
-    </section>
+    <div ng-view></div>
 
     <!-- Main modules -->
     <script src="app.module.js"></script>
