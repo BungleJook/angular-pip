@@ -3,7 +3,8 @@ angular.module('angularPip', [
     'ui.bootstrap',
     'core',
     'postList',
-    'postDetail'])
+    'postDetail',
+    'postTitleList'])
     .config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
             $locationProvider.hashPrefix('!');

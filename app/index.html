@@ -13,7 +13,7 @@
 
     <header class="jumbotron">
         <section class="container text-center">
-            <h1>{{"AngularJS, Bootstrap and Sass"}}</h1>
+            <h1><a href="#!/">{{"AngularJS, Bootstrap and Sass"}}</a></h1>
             <p>Basic project seed focused on AngularJS.</p>
         </section>
     </header>
@@ -22,12 +22,7 @@
         <div class="row">
             <div ng-view class="col-md-10"></div>
             <sidebar class="col-md-2 panel panel-default">
-                <h3>Sidebar</h3>
-                <ul>
-                    <li>Sidebar item 1</li>
-                    <li>Sidebar item 2</li>
-                    <li>Sidebar item 3</li>
-                </ul>   
+                <post-title-list></post-title-list>
             </sidebar>
         </div>
     </div>
@@ -44,11 +39,13 @@
     <script src="core/post/post.module.js"></script>
     <script src="core/post/post.service.js"></script>
 
-    <!-- Posts component -->
+    <!-- Posts components -->
     <script src="post-list/post-list.module.js"></script>
     <script src="post-list/post-list.component.js"></script>
     <script src="post-detail/post-detail.module.js"></script>
-    <script src="post-detail/post-detail.component.js"></script>    
+    <script src="post-detail/post-detail.component.js"></script>
+    <script src="post-title-list/post-title-list.module.js"></script>
+    <script src="post-title-list/post-title-list.component.js"></script>
 
   </body>
 </html>
