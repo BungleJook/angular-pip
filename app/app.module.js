@@ -1,5 +1,6 @@
 angular.module('angularPip', [
     'ngRoute',
+    'ui.bootstrap',
     'core',
     'postList',
     'postDetail'])

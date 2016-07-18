@@ -7,6 +7,7 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   </head>
   <body>
 
@@ -17,7 +18,19 @@
         </section>
     </header>
 
-    <div ng-view></div>
+    <div class="container">
+        <div class="row">
+            <div ng-view class="col-md-10"></div>
+            <sidebar class="col-md-2 panel panel-default">
+                <h3>Sidebar</h3>
+                <ul>
+                    <li>Sidebar item 1</li>
+                    <li>Sidebar item 2</li>
+                    <li>Sidebar item 3</li>
+                </ul>   
+            </sidebar>
+        </div>
+    </div>
 
     <footer class="container footer">
         <p>&copy; angular-pip 2016</p>
