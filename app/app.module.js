@@ -1,15 +1,15 @@
 angular.module('angularPip', [
-    'ngRoute',
+    'ui.router',
     'ui.bootstrap',
     'core',
     'postList',
     'postDetail',
     'postTitleList'])
-    .config(['$locationProvider', '$routeProvider',
-        function config($locationProvider, $routeProvider) {
+    .config(['$locationProvider', '$urlRouterProvider',
+        function config($locationProvider, $urlRouterProvider) {
             $locationProvider.hashPrefix('!');
 
-            $routeProvider
+            $urlRouterProvider
                 .otherwise('/posts');
         }
     ]);

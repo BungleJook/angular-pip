@@ -1,10 +1,11 @@
-angular.module('postDetail', ['ngRoute', 'core.post'])
-    .config(['$locationProvider', '$routeProvider',
-        function config($locationProvider, $routeProvider) {
+angular.module('postDetail', ['ui.router', 'core.post'])
+    .config(['$locationProvider', '$stateProvider',
+        function config($locationProvider, $stateProvider) {
             $locationProvider.hashPrefix('!');
 
-            $routeProvider
-                .when('/posts/:id', {
+            $stateProvider
+                .state('post-detail', {
+                    url: '/posts/{id}',
                     template: '<post-detail></post-detail>'
                 });
         }

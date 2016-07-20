@@ -5,7 +5,7 @@
     <title>angular-pip</title>
     <link rel="stylesheet" href="css/main.css" />
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   </head>
@@ -20,7 +20,7 @@
 
     <div class="container">
         <div class="row">
-            <div ng-view class="col-md-10"></div>
+            <div ui-view class="col-md-10"></div>
             <sidebar class="col-md-2 panel panel-default">
                 <post-title-list></post-title-list>
             </sidebar>

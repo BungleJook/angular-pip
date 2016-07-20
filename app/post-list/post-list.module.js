@@ -1,10 +1,11 @@
-angular.module('postList', ['core.post', 'ngRoute'])
-    .config(['$locationProvider', '$routeProvider',
-        function config($locationProvider, $routeProvider) {
+angular.module('postList', ['ui.router', 'core.post'])
+    .config(['$locationProvider', '$stateProvider',
+        function config($locationProvider, $stateProvider) {
             $locationProvider.hashPrefix('!');
 
-            $routeProvider
-                .when('/posts', {
+            $stateProvider
+                .state('post-list', {
+                    url: '/posts',
                     template: "<post-list></post-list>"
                 });
         }
